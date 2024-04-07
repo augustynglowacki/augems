@@ -8,7 +8,7 @@ interface Project {
 const projectsData: Project[] = [
   {
     title: 'Next.js Website - ⚽ Football Maniac',
-    description: `The project is centered around showcasing trips to football games. Its primary business goal is to drive conversions by guiding visitors to a user-friendly contact form where they can inquire about their dream football game experience. The website features an innovative world map feature that allows interested individuals to easily explore and plan their next football adventure.`,
+    description: `The project is centered around showcasing trips to football games. Its primary business goal is to drive conversions by guiding visitors to a user-friendly contact form where they can inquire about their dream football game experience.`,
     imgSrc: '/static/images/football-maniac.png',
     href: 'https://footballmaniac.pl',
   },
@@ -21,7 +21,7 @@ const projectsData: Project[] = [
   {
     title: 'Mobile App - 🎬 MoviePicker',
     description: `MoviePicker is a captivating React Native application for all your movie and TV series needs. Discover what's trending, curate your favorites, track what you've watched, and build a watchlist. Plus, personalize your profile!`,
-    imgSrc: '/static/images/movie-picker.jpg',
+    imgSrc: '/static/images/movie-picker.png',
     href: 'https://github.com/augustynglowacki/MoviePicker',
   },
 ]
