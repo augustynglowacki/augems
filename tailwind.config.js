@@ -22,11 +22,29 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
+        sans: ['var(--font-plus-jakarta-sans)', ...fontFamily.sans],
       },
       colors: {
-        primary: colors.pink,
-        gray: colors.gray,
+        primary: {
+          400: '#FF5A5A',
+          500: '#FF4545',
+          600: '#FF4545',
+          700: '#FF0000',
+        },
+        secondary: {
+          400: '#FFA500',
+          500: '#FD894B',
+          600: '#FF7A00',
+        },
+        background: {
+          light: '#FFFEFE',
+          dark: '#17021D',
+        },
+        gray: {
+          ...colors.gray,
+          100: '#FFFEFE',
+          900: '#20163E',
+        },
       },
       typography: ({ theme }) => ({
         DEFAULT: {
@@ -34,16 +52,16 @@ module.exports = {
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
-                color: `${theme('colors.primary.600')}`,
+                color: `${theme('colors.primary.700')}`,
               },
               code: { color: theme('colors.primary.400') },
             },
             'h1,h2': {
-              fontWeight: '700',
+              fontWeight: '600',
               letterSpacing: theme('letterSpacing.tight'),
             },
             h3: {
-              fontWeight: '600',
+              fontWeight: '500',
             },
             code: {
               color: theme('colors.indigo.500'),
