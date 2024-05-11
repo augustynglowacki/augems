@@ -8,7 +8,6 @@ import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
-import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
 const space_grotesk = Plus_Jakarta_Sans({
@@ -70,22 +69,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="manifest" href="/static/favicons/site.webmanifest" />
       <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#17021D" />
       <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
-      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17021D" />
+      <meta name="theme-color" content="#17021D" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <body className="bg-background-light pl-[calc(100vw-100%)] text-black antialiased dark:bg-background-dark dark:text-white">
-        <ThemeProviders>
-          {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
-          <SectionContainer>
-            <div className="flex h-screen flex-col justify-between font-sans">
-              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                <Header />
-                <main className="mb-auto">{children}</main>
-              </SearchProvider>
-              <Footer />
-            </div>
-          </SectionContainer>
-        </ThemeProviders>
+      <body className="bg-background text-gray-100 antialiased">
+        {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
+        <SectionContainer>
+          <div className="flex h-screen flex-col justify-between font-sans">
+            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+              <Header />
+              <main className="mb-auto">{children}</main>
+            </SearchProvider>
+            <Footer />
+          </div>
+        </SectionContainer>
       </body>
     </html>
   )
