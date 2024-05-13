@@ -67,6 +67,17 @@ module.exports = {
           900: '#20163E',
         },
       },
+      aspectRatio: {
+        portrait: "12 / 16",
+        rectangle: "16 / 12",
+      },
+      borderRadius: {
+        DEFAULT: "2px",
+      },
+      spacing: {
+        mobileNavOffset: "77px",
+        desktopNavOffset: "97px",
+      },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
