@@ -14,6 +14,7 @@ const font = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-copy',
+  weight: ["300", "400", "500", "600"],
 })
 
 export const metadata: Metadata = {
@@ -74,14 +75,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="antialiased text-gray-100 bg-background">
         {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
         <SectionContainer>
-          <div className="flex flex-col justify-between h-screen font-sans">
+          <div className="flex flex-col justify-between font-sans">
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
               <Header />
               <main className="mb-auto">{children}</main>
             </SearchProvider>
-            <Footer />
           </div>
         </SectionContainer>
+            <Footer />
       </body>
     </html>
   )

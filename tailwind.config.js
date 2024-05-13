@@ -13,10 +13,19 @@ module.exports = {
     './data/**/*.mdx',
   ],
   theme: {
+    screens: {
+      xxs: "361px",
+      xs: "480px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1460px",
+      "3xl": "1800px",
+      fhd: "1920px",
+      "4xl": "2400px",
+    },
     extend: {
-      breakpoints: {
-        '2xl': '1500px',
-      },
       lineHeight: {
         11: '2.75rem',
         12: '3rem',

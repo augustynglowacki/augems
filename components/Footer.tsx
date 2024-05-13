@@ -1,29 +1,85 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
+import SectionContainer from '@/components/SectionContainer'
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="mt-16 flex flex-col items-center">
-        <div className="mb-3 flex space-x-4">
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
-          <SocialIcon kind="github" href={siteMetadata.github} size={6} />
-          <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
-          {/* <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} /> */}
-          <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
-          {/* <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} /> */}
-          <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
-          {/* <SocialIcon kind="threads" href={siteMetadata.threads} size={6} /> */}
+    <footer className="py-0 pt-16 pb-16 mt-16 text-gray-900 bg-gray-100 lg:mt-24 lg:pt-24">
+      <SectionContainer>
+        <div className="flex flex-col xl:flex-row">
+          <div className="order-first w-full max-lg:mb-10 sm:w-2/3 xl:w-3/12">
+            <h2 className="max-xxs:text-lg mb-5 max-w-[300px] text-[21px] font-semibold !leading-[1.2] tracking-tighter md:mb-4 md:max-w-[400px] md:text-2xl">
+              Crafting Digital Identities: Branding & Web Development
+            </h2>
+            <a
+              aria-label={`Send me an e-mail`}
+              href={`mailto:${siteMetadata.email}`}
+              className="flex items-center transition group hover:text-primary-600 active:text-primary-800"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 22 22"
+                width="28"
+                height="28"
+                className="flex-shrink-0 inline-block h-full mr-2 transition fill-decoration-900 group-hover:fill-primary-600 group-active:fill-primary-800"
+              >
+                <path d="M2 5.5V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V19H20V7.3L12 14.5L2 5.5ZM0 10H5V12H0V10ZM0 15H8V17H0V15Z"></path>
+              </svg>
+              <span>{siteMetadata.email}</span>
+            </a>
+          </div>
+          <div className="flex flex-col flex-wrap justify-end w-full gap-x-20 xl:flex-row">
+            <div className="w-full max-lg:mb-2 sm:w-1/2 xl:w-2/12">
+              <h4 className="text-dark mt-3 text-lg font-semibold tracking-[-0.035em] lg:mb-9 lg:mt-0">
+                Quick Links
+              </h4>
+              <ul>
+                <li>
+                  <Link href="/about" className="inline-block lg:mb-1">
+                    About
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="w-full max-lg:mb-2 sm:w-1/2 xl:w-2/12">
+              <div className="w-full ">
+                <h4 className="text-dark mt-3 text-lg font-semibold tracking-[-0.035em] lg:mb-9 lg:mt-0">
+                  Services
+                </h4>
+                <ul>
+                  <li>Services will be added soon :)</li>
+                </ul>
+              </div>
+            </div>
+            <div className="order-first w-full mt-3 sm:w-1/2 md:mt-0 lg:order-last xl:w-4/12">
+              <h4 className="text-dark text-lg font-semibold tracking-[-0.035em] lg:mb-9 lg:mt-0">
+                Social Media
+              </h4>
+              <ul className="flex items-center mt-3 mb-3 space-x-4 lg:mb-6">
+                <li>
+                  <SocialIcon kind="facebook" href={siteMetadata.facebook} size={7} theme="light"/>
+                </li>
+                <li>
+                  <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={7} theme="light"/>
+                </li>
+                <li>
+                  <SocialIcon kind="github" href={siteMetadata.github} size={7} theme="light"/>
+                </li>
+                <li>
+                  <SocialIcon kind="instagram" href={siteMetadata.instagram} size={7} theme="light"/>
+                </li>
+              </ul>
+              <p className="hidden mt-16 text-base lg:block">
+                &copy; {new Date().getFullYear()} {siteMetadata.author}
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-200 ">
-          <div>{siteMetadata.author}</div>
-          <div>{` • `}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-          {/* <div>{` • `}</div>
-          <Link href="/">{siteMetadata.title}</Link> */}
-        </div>
-      </div>
+        <p className="mt-8 text-base lg:hidden ">
+          &copy; {new Date().getFullYear()} {siteMetadata.author}
+        </p>
+      </SectionContainer>
     </footer>
   )
 }

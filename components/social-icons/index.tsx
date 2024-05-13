@@ -26,24 +26,27 @@ type SocialIconProps = {
   kind: keyof typeof components
   href: string | undefined
   size?: number
+  theme?: 'dark' | 'light'
 }
 
-const SocialIcon = ({ kind, href, size = 8 }: SocialIconProps) => {
+const SocialIcon = ({ kind, href, size = 8, theme = 'dark' }: SocialIconProps) => {
   if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)))
     return null
 
   const SocialSvg = components[kind]
+  const textColor = theme === 'dark' ? 'text-primary-400' : 'text-decoration-900'
 
   return (
     <a
-      className="text-sm text-gray-200 transition hover:text-gray-200"
+      className={`text-sm ${textColor} transition hover:text-primary-600`}
+      aria-label={kind}
       target="_blank"
       rel="noopener noreferrer"
       href={href}
     >
       <span className="sr-only">{kind}</span>
       <SocialSvg
-        className={`fill-current text-gray-200 hover:text-primary-400 h-${size} w-${size}`}
+        className={`fill-current ${textColor} hover:text-primary-600 transition h-${size} w-${size}`}
       />
     </a>
   )
