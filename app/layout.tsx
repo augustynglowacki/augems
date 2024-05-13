@@ -10,10 +10,10 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { Metadata } from 'next'
 
-const space_grotesk = Plus_Jakarta_Sans({
+const font = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-plus-jakarta-sans',
+  variable: '--font-copy',
 })
 
 export const metadata: Metadata = {
@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
+      className={`${font.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
@@ -71,10 +71,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="theme-color" content="#17021D" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <body className="bg-background text-gray-100 antialiased">
+      <body className="antialiased text-gray-100 bg-background">
         {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
         <SectionContainer>
-          <div className="flex h-screen flex-col justify-between font-sans">
+          <div className="flex flex-col justify-between h-screen font-sans">
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
               <Header />
               <main className="mb-auto">{children}</main>

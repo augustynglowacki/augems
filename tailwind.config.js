@@ -24,17 +24,18 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['var(--font-plus-jakarta-sans)', ...fontFamily.sans],
+        sans: ['var(--font-copy)', ...fontFamily.sans],
       },
       colors: {
         primary: {
-          400: '#FFA500',
-          500: '#FD894B',
-          DEFAULT: '#FD894B',
-          600: '#FF7A00',
-          700: '#E66A00',
-          800: '#CC5B00',
-          900: '#B34C00',
+          300: '#FFBF66',
+          400: '#FFB347',
+          500: '#FFA500',
+          DEFAULT: '#FFA500',
+          600: '#FD894B',
+          700: '#FF7A00',
+          800: '#E66A00',
+          900: '#CC5B00',
         },
         secondary: {
           400: '#FF5A5A',
@@ -42,6 +43,19 @@ module.exports = {
           DEFAULT: '#FF4545',
           600: '#FF4545',
           700: '#FF0000',
+        },
+        decoration: {
+          50: '#F4E5F7', // Lightest
+          100: '#E9CBF0',
+          200: '#D3A6E1',
+          300: '#BD81D2',
+          400: '#A75CC3',
+          DEFAULT: '#962F90',
+          500: '#962F90', // Default
+          600: '#7F297B',
+          700: '#682366',
+          800: '#511D51',
+          900: '#3A173C', // Darkest
         },
         background: {
           DEFAULT: '#17021D',
@@ -55,6 +69,7 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
+            color: theme('colors.gray.100'),
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
