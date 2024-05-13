@@ -14,7 +14,7 @@ export default function Home({ posts }) {
           <h1 className="text-3xl font-semibold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          <p className="text-lg leading-7 text-gray-200">
             {siteMetadata.description}
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function Home({ posts }) {
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
                       <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <dd className="text-base font-medium leading-6 text-gray-200">
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       </dd>
                     </dl>
@@ -38,7 +38,7 @@ export default function Home({ posts }) {
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
+                              className="text-gray-100"
                             >
                               {title}
                             </Link>
@@ -49,14 +49,14 @@ export default function Home({ posts }) {
                             ))}
                           </div>
                         </div>
-                        <div className="prose text-gray-500 max-w-none dark:text-gray-400">
+                        <div className="prose text-gray-200 max-w-none ">
                           {summary}
                         </div>
                       </div>
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                          className="text-primary-500 hover:text-primary-400"
                           aria-label={`Read more: "${title}"`}
                         >
                           Read more &rarr;
@@ -74,7 +74,7 @@ export default function Home({ posts }) {
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
             href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+            className="text-primary-500 hover:text-primary-400"
             aria-label="All posts"
           >
             All Posts &rarr;
