@@ -63,13 +63,14 @@ module.exports = {
         gray: {
           ...colors.gray,
           100: '#FFFEFE',
+          200: '#E9E8E8',
           900: '#20163E',
         },
       },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.100'),
+            color: theme('colors.gray.200'),
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
