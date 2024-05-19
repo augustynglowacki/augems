@@ -5,11 +5,11 @@ import SectionContainer from '@/components/SectionContainer'
 
 export default function Footer() {
   return (
-    <footer className="py-0 pt-16 pb-16 mt-16 text-gray-900 bg-gray-100 lg:mt-24 lg:pt-24">
+    <footer className="py-0 pt-16 pb-16 mt-16 text-gray-900 bg-gray-100 xl:mt-24 xl:pt-24">
       <SectionContainer>
         <div className="flex flex-col xl:flex-row">
-          <div className="order-first w-full max-lg:mb-10 sm:w-2/3 xl:w-3/12">
-            <h2 className="max-xxs:text-lg mb-5 max-w-[300px] text-[21px] font-semibold !leading-[1.2] tracking-tighter md:mb-4 md:max-w-[400px] md:text-2xl">
+          <div className="order-first w-full max-xl:mb-10 sm:w-2/3 xl:w-3/12">
+            <h2 className="mb-5 max-w-[300px] text-[21px] font-semibold !leading-[1.2] tracking-tighter max-xxs:text-lg md:mb-4 md:max-w-[400px] md:text-2xl">
               Crafting Digital Identities: Branding & Web Development
             </h2>
             <a
@@ -30,21 +30,36 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex flex-col flex-wrap justify-end w-full gap-x-20 xl:flex-row">
-            <div className="w-full max-lg:mb-2 sm:w-1/2 xl:w-2/12">
-              <h4 className="text-dark mt-3 text-lg font-semibold tracking-[-0.035em] lg:mb-9 lg:mt-0">
+            <div className="w-full max-xl:mb-2 sm:w-1/2 xl:w-2/12">
+              <h4 className="text-dark mt-5 text-lg font-semibold tracking-[-0.035em] mb-2 xl:mb-8 xl:mt-0">
                 Quick Links
               </h4>
               <ul>
                 <li>
-                  <Link href="/about" className="inline-block lg:mb-1">
+                  <Link href="/blog" className="inline-block mb-2 xl:mb-3">
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tags" className="inline-block mb-2 xl:mb-3">
+                    Blog Categories
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/projects" className="inline-block mb-2 xl:mb-3">
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="inline-block">
                     About
                   </Link>
                 </li>
               </ul>
             </div>
-            <div className="w-full max-lg:mb-2 sm:w-1/2 xl:w-2/12">
+            <div className="w-full max-xl:mb-2 sm:w-1/2 xl:w-2/12">
               <div className="w-full ">
-                <h4 className="text-dark mt-3 text-lg font-semibold tracking-[-0.035em] lg:mb-9 lg:mt-0">
+                <h4 className="text-dark mt-5 text-lg font-semibold tracking-[-0.035em] mb-2 xl:mb-8 xl:mt-0">
                   Services
                 </h4>
                 <ul>
@@ -52,31 +67,36 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="order-first w-full mt-3 sm:w-1/2 md:mt-0 lg:order-last xl:w-4/12">
-              <h4 className="text-dark text-lg font-semibold tracking-[-0.035em] lg:mb-9 lg:mt-0">
+            <div className="order-first w-full max-xl:mb-2 sm:w-1/2 xl:order-last xl:w-4/12">
+              <h4 className="text-dark text-lg font-semibold tracking-[-0.035em] mb-2 xl:mb-8 xl:mt-0">
                 Social Media
               </h4>
-              <ul className="flex items-center mt-3 mb-3 space-x-4 lg:mb-6">
+              <ul className="flex items-center mt-3 mb-3 space-x-4 xl:mb-6">
                 <li>
-                  <SocialIcon kind="facebook" href={siteMetadata.facebook} size={7} theme="light"/>
+                  <SocialIcon kind="facebook" href={siteMetadata.facebook} size={7} theme="light" />
                 </li>
                 <li>
-                  <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={7} theme="light"/>
+                  <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={7} theme="light" />
                 </li>
                 <li>
-                  <SocialIcon kind="github" href={siteMetadata.github} size={7} theme="light"/>
+                  <SocialIcon kind="github" href={siteMetadata.github} size={7} theme="light" />
                 </li>
                 <li>
-                  <SocialIcon kind="instagram" href={siteMetadata.instagram} size={7} theme="light"/>
+                  <SocialIcon
+                    kind="instagram"
+                    href={siteMetadata.instagram}
+                    size={7}
+                    theme="light"
+                  />
                 </li>
               </ul>
-              <p className="hidden mt-16 text-base lg:block">
+              <p className="hidden mt-16 text-base xl:block">
                 &copy; {new Date().getFullYear()} {siteMetadata.author}
               </p>
             </div>
           </div>
         </div>
-        <p className="mt-8 text-base lg:hidden ">
+        <p className="mt-8 text-base xl:hidden ">
           &copy; {new Date().getFullYear()} {siteMetadata.author}
         </p>
       </SectionContainer>
