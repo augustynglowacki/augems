@@ -8,7 +8,7 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
   const isAnchorLink = href && href.startsWith('#')
 
   if (isInternalLink) {
-    return <Link href={href} {...rest} className={`hover:text-primary-400 active:text-primary-800 transition ${rest.className}`} />
+    return <Link href={href} scroll={false} {...rest} className={`hover:text-primary-400 active:text-primary-800 transition ${rest.className}`} />
   }
 
   if (isAnchorLink) {

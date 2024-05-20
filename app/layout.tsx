@@ -9,12 +9,13 @@ import SectionContainer from '@/components/SectionContainer'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { Metadata } from 'next'
+import { Providers } from 'app/providers'
 
 const font = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-copy',
-  weight: ["300", "400", "500", "600"],
+  weight: ['300', '400', '500', '600'],
 })
 
 export const metadata: Metadata = {
@@ -75,14 +76,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="antialiased text-gray-100 bg-background">
         {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
         <SectionContainer>
-          <div className="flex flex-col justify-between font-sans">
+          <div className="font-sans min-h-[100vh]">
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
               <Header />
-              <main className="mb-auto">{children}</main>
+              <Providers>
+                <main className="mb-auto">{children}</main>
+              </Providers>
             </SearchProvider>
           </div>
         </SectionContainer>
-            <Footer />
+        <Footer />
       </body>
     </html>
   )
