@@ -79,8 +79,8 @@ export default function ListLayout({
   return (
     <>
       <div className="container divide-y divide-decoration-600">
-        <div className="pt-6 pb-4 space-y-2 lg:pb-8 md:space-y-5">
-          <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-6xl">
+        <div className="pt-6 pb-4 space-y-2 lg:pt-0 2xl:pt-6 lg:pb-8 md:space-y-5">
+          <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-5xl 2xl:text-6xl">
             {title}
           </h1>
           <div className="relative max-w-lg">

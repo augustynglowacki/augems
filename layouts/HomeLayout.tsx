@@ -5,96 +5,83 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import Image from '@/components/Image'
+
 const MAX_DISPLAY = 5
+
+const BulletPoint = ({ children }) => (
+  <p className="flex items-center -mx-2">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-[22px] h-[22px] sm:w-6 sm:h-6 mx-2 text-decoration-800"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M14 5l7 7m0 0l-7 7m7-7H3"
+      />
+    </svg>
+    <span className="sm:mx-1 -mt-0.5">{children}</span>
+  </p>
+)
+
+const CheckMark = ({ children }) => (
+  <div className="flex flex-row items-center -mx-2">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-[22px] h-[22px] sm:w-6 sm:h-6 mx-2 text-primary"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+    <h2 className="sm:mx-1 -mt-0.5 inline">{children}</h2>
+  </div>
+)
 
 export default function HomeLayout({ posts }) {
   return (
     <>
-      <div className="container pt-6 mb-12 space-y-2 md:space-y-5">
-        <div className="grid gap-8 pb-6 border-b border-decoration-600 xl:grid-cols-7 xl:pb-8">
-          <div className="col-span-4 max-w-[700px]">
+      <div className="container pt-6 mb-12 space-y-2 lg:pt-0 2xl:pt-6 md:space-y-5">
+        <div className="grid gap-8 pb-6 border-b border-decoration-600 lg:grid-cols-12 2xl:grid-cols-7 lg:pb-8">
+          <div className="col-span-7 2xl:col-span-4 max-w-[700px]">
             <div className="mb-4 mr-3 flex items-center text-xs font-bold uppercase tracking-[0.15em] text-gray-200">
               <div className="mr-3">Augustyn Głowacki - Web Freelancer</div>
               <div className="hidden w-6 h-px bg-gray-200 xs:block"></div>
             </div>
-            <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-6xl">
-              <span className="text-primary">Revitalize</span> your online presence with a powerful
+            <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-5xl 2xl:text-6xl">
+              <span className="text-primary">Revitalize</span> your <br/>online presence with<br/> a powerful
               website.
             </h1>
-            <p className="mt-5 text-lg">
-              Struggling to attract clients online?
-              <br />
-              Your current website feels like a mess?
-              <br />
-              Services you offer are falling behind on Google Maps? <br />
-              Have an idea that needs a tailored web solution, but web agencies are
-              too costly?
-              <br /><br />
-              If you relate to any of these problems, here's what I can do to help.
-            </p>
-            <div className="mt-6 space-y-5">
-              <p className="flex items-center -mx-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 mx-2 text-primary"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-
-                <span className="mx-2 -mt-0.5 leading-none">Web Design & Development</span>
-              </p>
-
-              <p className="flex items-center -mx-2 ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 mx-2 text-primary"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                <span className="mx-2 -mt-0.5 leading-none">Digital Image Rebranding</span>
-              </p>
-
-              <p className="flex items-center -mx-2 ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 mx-2 text-primary"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-
-                <span className="mx-2 -mt-0.5 leading-none">Google Maps Business Profile Management</span>
+            <div className="mt-6 space-y-2 2xl:text-lg">
+              <BulletPoint>Struggling to attract clients online?</BulletPoint>
+              <BulletPoint>Your current website feels like a mess?</BulletPoint>
+              <BulletPoint>Lagging behind competition on Google Maps?</BulletPoint>
+              <BulletPoint>Have an idea that needs a tailored web solution?</BulletPoint>
+              <p className="pt-3">
+                If you relate with any of these problems, here's what I can do to solve them:
               </p>
             </div>
+            <div className="mt-5 space-y-3">
+              <CheckMark>Conversion Focused Web Design & Development</CheckMark>
+              <CheckMark>Brand Identity Refresh: Logo, Color Palette & Fonts</CheckMark>
+              <CheckMark>Google Maps: Business Profile Management</CheckMark>
+            </div>
           </div>
-          <div className="col-span-3 hidden h-[580px] xl:block">
+          <div className="lg:col-span-5 2xl:col-span-3 hidden lg:h-[515px] 2xl:h-[573px] lg:block">
             <Image
               width={544}
-              height={580}
-              className="h-full w-full max-w-2xl rounded object-cover object-[50%,80%]"
+              height={573}
+              className="h-full w-full max-w-2xl rounded object-cover lg:object-[50%,67%] 2xl:object-[50%,80%]"
               src="/static/images/hero.jpg"
               loading="eager"
               alt="Me - Augustyn Głowacki - Web Freelancer"

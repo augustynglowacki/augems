@@ -15,7 +15,7 @@ const Header = () => {
               <img
                 alt="Augems Logo representing a cartoon representation of me, the author of this website."
                 src="/static/images/logo.png"
-                className="h-auto w-16 md:w-20 lg:w-24 2xl:w-[110px]"
+                className="h-auto w-16 md:w-20 lg:w-18 2xl:w-[110px]"
               />
             </div>
           </Link>

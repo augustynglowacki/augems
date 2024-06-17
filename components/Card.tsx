@@ -1,12 +1,20 @@
 import Image from './Image'
 import Link from './Link'
 
-const Card = ({ title, description, imgSrc, href }) => (
+interface CardProps {
+  title: string
+  description: string
+  imgSrc?: string
+  href?: string
+  imgClassName?: string
+}
+
+const Card = ({ title, description, imgSrc, href, imgClassName }: CardProps) => (
   <div className="p-4 md:w-1/2">
     <div
       className={`${
         imgSrc && 'h-full'
-      }  overflow-hidden rounded-md border-2 border-opacity-60 border-decoration-700`}
+      }  overflow-hidden rounded-md border-2 border-decoration-700 border-opacity-60`}
     >
       {imgSrc &&
         (href ? (
@@ -14,7 +22,7 @@ const Card = ({ title, description, imgSrc, href }) => (
             <Image
               alt={title}
               src={imgSrc}
-              className="object-cover object-center w-full md:h-64 lg:h-80 xl:h-96"
+              className={`w-full object-cover object-center md:h-64 lg:h-80 xl:h-96 ${imgClassName}`}
               width={641}
               height={384}
             />
@@ -23,8 +31,8 @@ const Card = ({ title, description, imgSrc, href }) => (
           <Image
             alt={title}
             src={imgSrc}
-            className="object-cover object-center md:h-36 lg:h-48 xl:h-80"
-            width={1080}
+            className={`object-cover object-center md:h-36 lg:h-48 xl:h-80 ${imgClassName}`}
+            width={641}
             height={384}
           />
         ))}

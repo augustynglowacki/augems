@@ -14,12 +14,12 @@ export default function AuthorLayout({ children, content }: Props) {
   return (
     <>
       <div className="container">
-        <div className="pt-6 pb-4 space-y-2 border-b border-decoration-600 md:space-y-5 lg:pb-8">
+        <div className="pt-6 pb-4 space-y-2 border-b lg:pt-0 2xl:pt-6 border-decoration-600 md:space-y-5 lg:pb-8">
           <div className="mb-4 flex items-center text-xs font-semibold uppercase tracking-[0.15em] text-gray-200">
             <div className="mr-3">Get to know me</div>
             <div className="w-6 h-px bg-gray-200"></div>
           </div>
-          <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-6xl">
+          <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-5xl 2xl:text-6xl">
             About me
           </h1>
         </div>

@@ -30,12 +30,14 @@ module.exports = {
         center: true,
         padding: {
           DEFAULT: '1rem',
-          sm: '2rem',
-          lg: '2rem',
+          md: '3rem',
+          lg: '3rem',
+          xl: '3rem',
+          '2xl': '3rem',
         },
         screens: {
-          sm: '100%',
-          lg: '1280px',
+          lg: '1180px',
+          xl: '1280px',
           '2xl': '1376px',
         },
       },
