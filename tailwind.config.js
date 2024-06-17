@@ -26,6 +26,19 @@ module.exports = {
       "4xl": "2400px",
     },
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '2rem',
+        },
+        screens: {
+          sm: '100%',
+          lg: '1280px',
+          '2xl': '1376px',
+        },
+      },
       lineHeight: {
         11: '2.75rem',
         12: '3rem',

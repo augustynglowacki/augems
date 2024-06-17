@@ -7,16 +7,20 @@ export const metadata = genPageMetadata({ title: 'Projects' })
 export default function Projects() {
   return (
     <>
-      <div className="divide-y divide-decoration-600">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-semibold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+      <div className="container divide-y divide-decoration-600">
+        <div className="pt-6 pb-4 space-y-2 lg:pb-8 md:space-y-5">
+        <div className="flex items-center mb-4 text-xs font-semibold tracking-[0.15em] uppercase text-gray-200">
+          <div className="mr-3">Some of my work</div>
+          <div className="w-6 h-px bg-gray-200"></div>
+        </div>
+          <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-6xl">
             Projects
           </h1>
-          <p className="text-lg leading-7 text-gray-200 ">
+          {/* <p className="text-lg leading-7 text-gray-200 ">
             Some of my non-NDA work.
-          </p>
+          </p> */}
         </div>
-        <div className="container py-12">
+        <div className="py-12">
           <div className="flex flex-wrap -m-4">
             {projectsData.map((d) => (
               <Card

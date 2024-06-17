@@ -33,7 +33,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
   const basePath = path.split('/')[0]
 
   return (
-    <section>
+    <section className="container lg:max-w-[1090px]">
       <ScrollTopAndComment />
       <article>
         <div className="xl:divide-y divide-decoration-600">

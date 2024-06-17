@@ -13,21 +13,25 @@ export default function AuthorLayout({ children, content }: Props) {
 
   return (
     <>
-      <div className="divide-y divide-decoration-600">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-semibold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+      <div className="container">
+        <div className="pt-6 pb-4 space-y-2 border-b border-decoration-600 md:space-y-5 lg:pb-8">
+          <div className="mb-4 flex items-center text-xs font-semibold uppercase tracking-[0.15em] text-gray-200">
+            <div className="mr-3">Get to know me</div>
+            <div className="w-6 h-px bg-gray-200"></div>
+          </div>
+          <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-6xl">
             About me
           </h1>
         </div>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-12 xl:space-y-0">
-          <div className="flex flex-col items-center pt-8">
+        <div className="items-start space-y-2 lg:grid lg:grid-cols-8 lg:gap-x-12 lg:space-y-0">
+          <div className="flex flex-col items-center pt-8 lg:col-span-3">
             {avatar && (
               <Image
                 src={avatar}
                 alt="Photo of me, Augustyn, taken in Katowice, Poland."
                 width={620}
                 height={600}
-                className="h-56 w-2/3 rounded object-cover object-[50%,10%] sm:h-64 lg:h-80 xl:h-auto xl:w-80 xl:object-center"
+                className="h-56 w-2/3 rounded object-cover object-[50%,10%] sm:h-64 lg:h-full lg:w-full"
               />
             )}
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
@@ -40,9 +44,7 @@ export default function AuthorLayout({ children, content }: Props) {
               {/* <SocialIcon kind="twitter" href={twitter} /> */}
             </div>
           </div>
-          <div className="pt-8 pb-8 prose max-w-none xl:col-span-2">
-            {children}
-          </div>
+          <div className="pt-8 pb-8 prose max-w-none lg:col-span-5">{children}</div>
         </div>
       </div>
     </>

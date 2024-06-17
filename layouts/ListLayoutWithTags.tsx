@@ -77,14 +77,18 @@ export default function ListLayoutWithTags({
 
   return (
     <>
-      <div>
-        <div className="pt-6 pb-6">
-          <h1 className="text-3xl font-semibold leading-9 tracking-tight text-gray-100 sm:hidden sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            {title}
+      <div className="container">
+        <div className="pt-6 pb-4 mb-12 space-y-2 border-b lg:pb-8 border-decoration-600 md:space-y-5">
+        <div className="flex items-center mb-4 text-xs font-semibold tracking-[0.15em] uppercase text-gray-200">
+          <div className="mr-3">My Blog</div>
+          <div className="w-6 h-px bg-gray-200"></div>
+        </div>
+          <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-6xl">
+            Web Dev Adventures: Mishaps, Wins & Lessons Learned
           </h1>
         </div>
         <div className="flex sm:space-x-24">
-          <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded pt-5 shadow-md sm:flex bg-decoration-900/70 shadow-gray-800/40">
+          <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded bg-decoration-900/70 pt-5 shadow-md shadow-gray-800/40 sm:flex">
             <div className="px-6 py-4">
               {pathname.startsWith('/blog') ? (
                 <h3 className="font-bold uppercase text-primary-500">All Posts</h3>
@@ -143,9 +147,7 @@ export default function ListLayoutWithTags({
                             {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                           </div>
                         </div>
-                        <div className="prose text-gray-200 max-w-none ">
-                          {summary}
-                        </div>
+                        <div className="prose text-gray-200 max-w-none ">{summary}</div>
                       </div>
                     </article>
                   </li>

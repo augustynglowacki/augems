@@ -5,7 +5,6 @@ import { Plus_Jakarta_Sans } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
-import SectionContainer from '@/components/SectionContainer'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { Metadata } from 'next'
@@ -75,16 +74,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="antialiased text-gray-100 bg-background">
         {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
-        <SectionContainer>
-          <div className="font-sans min-h-[100vh]">
-            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <Providers>
+        <div className="min-h-[100vh] font-sans">
+          <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+            <Header />
+            {/* <Providers>
                 <main className="mb-auto">{children}</main>
-              </Providers>
-            </SearchProvider>
-          </div>
-        </SectionContainer>
+              </Providers> */}
+            <main className="mb-auto">{children}</main>
+          </SearchProvider>
+        </div>
         <Footer />
       </body>
     </html>
