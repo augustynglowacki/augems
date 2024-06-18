@@ -9,10 +9,10 @@ import Image from '@/components/Image'
 const MAX_DISPLAY = 5
 
 const BulletPoint = ({ children }) => (
-  <p className="flex items-center -mx-2">
+  <p className="flex items-center w-full -mx-2">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-[22px] h-[22px] sm:w-6 sm:h-6 mx-2 text-decoration-800"
+      className="mx-2 h-[22px] w-[22px] flex-shrink-0 text-decoration-800 sm:h-6 sm:w-6"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -24,15 +24,15 @@ const BulletPoint = ({ children }) => (
         d="M14 5l7 7m0 0l-7 7m7-7H3"
       />
     </svg>
-    <span className="sm:mx-1 -mt-0.5">{children}</span>
+    <span className="-mt-0.5 sm:mx-1">{children}</span>
   </p>
 )
 
 const CheckMark = ({ children }) => (
-  <div className="flex flex-row items-center -mx-2">
+  <div className="flex flex-row items-center w-full -mx-2">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-[22px] h-[22px] sm:w-6 sm:h-6 mx-2 text-primary"
+      className="mx-2 h-[22px] w-[22px] flex-shrink-0 text-primary sm:h-6 sm:w-6"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -44,48 +44,63 @@ const CheckMark = ({ children }) => (
         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
       />
     </svg>
-    <h2 className="sm:mx-1 -mt-0.5 inline">{children}</h2>
+    <h2 className="-mt-0.5 inline sm:mx-1">{children}</h2>
   </div>
 )
 
 export default function HomeLayout({ posts }) {
   return (
     <>
-      <div className="container pt-6 mb-12 space-y-2 lg:pt-0 2xl:pt-6 md:space-y-5">
-        <div className="grid gap-8 pb-6 border-b border-decoration-600 lg:grid-cols-12 2xl:grid-cols-7 lg:pb-8">
-          <div className="col-span-7 2xl:col-span-4 max-w-[700px]">
-            <div className="mb-4 mr-3 flex items-center text-xs font-bold uppercase tracking-[0.15em] text-gray-200">
-              <div className="mr-3">Augustyn Głowacki - Web Freelancer</div>
-              <div className="hidden w-6 h-px bg-gray-200 xs:block"></div>
+      <div className="container pt-6 mb-12 space-y-2 md:space-y-5 lg:pt-0 2xl:pt-6">
+        <div className="pb-6 border-b border-decoration-600 lg:pb-8">
+          <div className="grid gap-8 lg:grid-cols-12 2xl:grid-cols-7">
+            <div className="col-span-7 max-w-[700px] 2xl:col-span-4">
+              <div className="mb-4 mr-3 flex items-center text-xs font-bold uppercase tracking-[0.15em] text-gray-200">
+                <div className="mr-3">Augustyn Głowacki - Web Freelancer</div>
+                <div className="hidden w-6 h-px bg-gray-200 xs:block"></div>
+              </div>
+              <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-5xl 2xl:text-6xl">
+                <em className="not-italic text-primary">Revitalize</em> your <br />
+                online presence with
+                <br /> a website you{' '}
+                <em className="not-italic underline decoration-primary">deserve.</em>
+              </h1>
+              <div className="mt-6 space-y-2 2xl:text-lg">
+                <BulletPoint>Struggling to attract clients online?</BulletPoint>
+                <BulletPoint>Your current website feels like a mess?</BulletPoint>
+                <BulletPoint>Have an idea that needs a bespoke web solution?</BulletPoint>
+                <p className="pt-3">
+                  If you relate with any of these problems, here's how I can solve them:
+                </p>
+              </div>
+              <div className="mt-5 space-y-3">
+                <CheckMark>
+                  <em className="not-italic text-normal">Roadmapping:</em>&nbsp;Transform Business
+                  Goals into a Website Strategy
+                </CheckMark>
+                <CheckMark>
+                  <em className="not-italic text-normal">Conversion Focused</em>&nbsp;Web Design
+                </CheckMark>
+                <CheckMark>
+                  <em className="not-italic text-normal">Performance Oriented</em>&nbsp;Web
+                  Development
+                </CheckMark>
+                {/* <CheckMark>
+                  <em className="not-italic text-normal">Rebranding:</em>&nbsp;Sleek Logo, Color
+                  Palette & Fonts
+                </CheckMark> */}
+              </div>
             </div>
-            <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-5xl 2xl:text-6xl">
-              <span className="text-primary">Revitalize</span> your <br/>online presence with<br/> a powerful
-              website.
-            </h1>
-            <div className="mt-6 space-y-2 2xl:text-lg">
-              <BulletPoint>Struggling to attract clients online?</BulletPoint>
-              <BulletPoint>Your current website feels like a mess?</BulletPoint>
-              <BulletPoint>Lagging behind competition on Google Maps?</BulletPoint>
-              <BulletPoint>Have an idea that needs a tailored web solution?</BulletPoint>
-              <p className="pt-3">
-                If you relate with any of these problems, here's what I can do to solve them:
-              </p>
+            <div className="hidden lg:col-span-5 lg:block lg:h-[485px] 2xl:col-span-3 2xl:h-[540px]">
+              <Image
+                width={544}
+                height={580}
+                className="h-full w-full max-w-2xl rounded object-cover lg:object-[50%,67%] 2xl:object-[50%,80%]"
+                src="/static/images/hero.jpg"
+                loading="eager"
+                alt="Me - Augustyn Głowacki - Web Freelancer"
+              />
             </div>
-            <div className="mt-5 space-y-3">
-              <CheckMark>Conversion Focused Web Design & Development</CheckMark>
-              <CheckMark>Brand Identity Refresh: Logo, Color Palette & Fonts</CheckMark>
-              <CheckMark>Google Maps: Business Profile Management</CheckMark>
-            </div>
-          </div>
-          <div className="lg:col-span-5 2xl:col-span-3 hidden lg:h-[515px] 2xl:h-[573px] lg:block">
-            <Image
-              width={544}
-              height={573}
-              className="h-full w-full max-w-2xl rounded object-cover lg:object-[50%,67%] 2xl:object-[50%,80%]"
-              src="/static/images/hero.jpg"
-              loading="eager"
-              alt="Me - Augustyn Głowacki - Web Freelancer"
-            />
           </div>
         </div>
       </div>

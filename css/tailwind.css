@@ -11,7 +11,7 @@
 }
 
 .footnotes {
-  @apply mt-12 border-t pt-8 border-decoration-700;
+  @apply mt-12 border-t border-decoration-700 pt-8;
 }
 
 .data-footnote-backref {
@@ -32,4 +32,94 @@ input:-webkit-autofill:focus {
 
 .katex-display {
   overflow: auto hidden;
+}
+
+.augems-btn {
+  transition: all 0.2s;
+  transition-delay: 0.05s;
+}
+
+.augems-btn .augems-btn-arrow {
+  transform-origin: 40% 50%;
+  animation: infiniteBounceX 15s infinite ease-in-out;
+  animation-delay: 5s;
+}
+
+@media (hover: hover) {
+  .augems-btn:hover {
+    color: #ffbf66;
+    transition: all 0.2s;
+    transition-delay: 0.05s;
+  }
+  .augems-btn:active,
+  .augems-btn:active,
+  .augems-btn:focus,
+  .augems-btn:focus {
+    transition: none;
+    transition-delay: 0s;
+  }
+
+  .augems-btn:hover .augems-btn-arrow {
+    animation: bounceX 0.8s infinite;
+    animation-delay: 0.25s;
+  }
+}
+
+@keyframes infiniteBounceX {
+  0%,
+  6% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  8% {
+    transform: rotate(-45deg);
+    animation-timing-function: ease-in-out;
+  }
+  10% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  12% {
+    transform: rotate(-45deg);
+    animation-timing-function: ease-in-out;
+  }
+  14% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  16% {
+    transform: rotate(-45deg);
+    animation-timing-function: ease-in-out;
+  }
+  18% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  20% {
+    transform: rotate(-45deg);
+    animation-timing-function: ease-in-out;
+  }
+  22% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounceX {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
