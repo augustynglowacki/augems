@@ -62,7 +62,7 @@ export default function HomeLayout({ posts }) {
               <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-5xl 2xl:text-6xl">
                 <em className="not-italic text-primary">Revitalize</em> your <br />
                 online presence with
-                <br /> a website you{' '}
+                <br />a website you{' '}
                 <em className="not-italic underline decoration-primary">deserve.</em>
               </h1>
               <div className="mt-6 space-y-2 2xl:text-lg">
@@ -75,20 +75,14 @@ export default function HomeLayout({ posts }) {
               </div>
               <div className="mt-5 space-y-3">
                 <CheckMark>
-                  <em className="not-italic text-normal">Roadmapping:</em>&nbsp;Transform Business
-                  Goals into a Website Strategy
+                  Discovery Process: Transforming business goals into a website strategy
                 </CheckMark>
                 <CheckMark>
-                  <em className="not-italic text-normal">Conversion Focused</em>&nbsp;Web Design
+                  Web Design: Breathing life into the action plan with a conversion-focused mindset
                 </CheckMark>
                 <CheckMark>
-                  <em className="not-italic text-normal">Performance Oriented</em>&nbsp;Web
-                  Development
+                  Web Development: Engineering the designs into a game-changing website
                 </CheckMark>
-                {/* <CheckMark>
-                  <em className="not-italic text-normal">Rebranding:</em>&nbsp;Sleek Logo, Color
-                  Palette & Fonts
-                </CheckMark> */}
               </div>
             </div>
             <div className="hidden lg:col-span-5 lg:block lg:h-[485px] 2xl:col-span-3 2xl:h-[540px]">
