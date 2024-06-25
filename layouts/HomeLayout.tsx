@@ -5,6 +5,8 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import Image from '@/components/Image'
+import RevealOnScroll from '@/components/RevealOnScroll'
+import { AnimatedImage } from '@/components/AnimatedImage'
 
 const MAX_DISPLAY = 5
 
@@ -55,40 +57,50 @@ export default function HomeLayout({ posts }) {
         <div className="pb-6 border-b border-decoration-600 lg:pb-8">
           <div className="grid gap-8 lg:grid-cols-12 2xl:grid-cols-7">
             <div className="col-span-7 max-w-[700px] 2xl:col-span-4">
-              <div className="mb-4 mr-3 flex items-center text-xs font-bold uppercase tracking-[0.15em] text-gray-200">
-                <div className="mr-3">Augustyn Głowacki - Web Freelancer</div>
-                <div className="hidden w-6 h-px bg-gray-200 xs:block"></div>
-              </div>
-              <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-5xl 2xl:text-6xl">
-                <em className="not-italic text-primary">Revitalize</em> your <br />
-                online presence with
-                <br />a website you{' '}
-                <em className="inline-block not-italic border-b-2 border-b-primary">deserve.</em>
-              </h1>
-              <div className="mt-6 space-y-2 2xl:text-lg">
-                <BulletPoint>Struggling to attract clients online?</BulletPoint>
-                <BulletPoint>Your current website feels like a mess?</BulletPoint>
-                <BulletPoint>Have an idea that needs a bespoke web solution?</BulletPoint>
-                <p className="pt-3">If you relate with these problems, I'm here to help you by:</p>
-              </div>
-              <div className="mt-5 space-y-3">
-                <CheckMark>Transforming your business goals into a website strategy</CheckMark>
-                <CheckMark>Designing a conversion-focused website layout</CheckMark>
-                <CheckMark>
-                  Developing a modern & fast website with a robust content management
-                </CheckMark>
-              </div>
+              <RevealOnScroll variant="fade-up" delay={0.3}>
+                <div className="mb-4 mr-3 flex items-center text-xs font-bold uppercase tracking-[0.15em] text-gray-200">
+                  <div className="mr-3">Augustyn Głowacki - Web Freelancer</div>
+                  <div className="hidden w-6 h-px bg-gray-200 xs:block"></div>
+                </div>
+              </RevealOnScroll>
+              <RevealOnScroll variant="fade-up" delay={0.1}>
+                <h1 className="text-3xl font-semibold !leading-tight tracking-tight text-gray-100 sm:text-4xl md:text-5xl 2xl:text-6xl">
+                  <em className="not-italic text-primary">Revitalize</em> your <br />
+                  online presence with
+                  <br />a website you{' '}
+                  <em className="inline-block not-italic border-b-2 border-b-primary">deserve.</em>
+                </h1>
+              </RevealOnScroll>
+              <RevealOnScroll variant="fade-up" delay={0.5}>
+                <div className="mt-6 space-y-2 2xl:text-lg">
+                  <BulletPoint>Struggling to attract clients online?</BulletPoint>
+                  <BulletPoint>Your current website feels like a mess?</BulletPoint>
+                  <BulletPoint>Have an idea that needs a bespoke web solution?</BulletPoint>
+                  <p className="pt-3">
+                    If you relate with these problems, I'm here to help you by:
+                  </p>
+                </div>
+              </RevealOnScroll>
+              <RevealOnScroll variant="fade-up" delay={0.7}>
+                <div className="mt-5 space-y-3">
+                  <CheckMark>Transforming your business goals into a website strategy</CheckMark>
+                  <CheckMark>Designing a conversion-focused website layout</CheckMark>
+                  <CheckMark>
+                    Developing a modern & fast website with a robust content management
+                  </CheckMark>
+                </div>
+              </RevealOnScroll>
             </div>
-            <div className="hidden lg:col-span-5 lg:block lg:h-[485px] 2xl:col-span-3 2xl:h-[540px]">
-              <Image
-                width={544}
-                height={580}
-                className="h-full w-full max-w-2xl rounded object-cover lg:object-[50%,67%] 2xl:object-[50%,80%]"
-                src="/static/images/hero.jpg"
-                loading="eager"
-                alt="Me - Augustyn Głowacki - Web Freelancer"
-              />
-            </div>
+
+            <AnimatedImage
+              width={544}
+              height={580}
+              wrapperClassName="hidden lg:col-span-5 lg:block lg:h-[485px] 2xl:col-span-3 2xl:h-[540px]"
+              className="h-full w-full max-w-2xl rounded object-cover lg:object-[50%,67%] 2xl:object-[50%,80%]"
+              src="/static/images/hero.jpg"
+              loading="eager"
+              alt="Me - Augustyn Głowacki - Web Freelancer"
+            />
           </div>
         </div>
       </div>

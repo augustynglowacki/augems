@@ -1,0 +1,194 @@
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply mt-12 border-t border-decoration-700 pt-8;
+}
+
+.data-footnote-backref {
+  @apply no-underline;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+.augems-btn {
+  transition: all 0.2s;
+  transition-delay: 0.05s;
+}
+
+.augems-btn .augems-btn-arrow {
+  transform-origin: 40% 50%;
+  animation: infiniteBounceX 15s infinite ease-in-out;
+  animation-delay: 5s;
+}
+
+@media (hover: hover) {
+  .augems-btn:hover {
+    color: #ffbf66;
+    transition: all 0.2s;
+    transition-delay: 0.05s;
+  }
+  .augems-btn:active,
+  .augems-btn:active,
+  .augems-btn:focus,
+  .augems-btn:focus {
+    transition: none;
+    transition-delay: 0s;
+  }
+
+  .augems-btn:hover .augems-btn-arrow {
+    animation: bounceX 0.8s infinite;
+    animation-delay: 0.25s;
+  }
+}
+
+@keyframes infiniteBounceX {
+  0%,
+  6% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  8% {
+    transform: rotate(-45deg);
+    animation-timing-function: ease-in-out;
+  }
+  10% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  12% {
+    transform: rotate(-45deg);
+    animation-timing-function: ease-in-out;
+  }
+  14% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  16% {
+    transform: rotate(-45deg);
+    animation-timing-function: ease-in-out;
+  }
+  18% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  20% {
+    transform: rotate(-45deg);
+    animation-timing-function: ease-in-out;
+  }
+  22% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounceX {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.reveal-ani-wrapper {
+  width: 100%;
+}
+.reveal-ani-container {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease-out,
+    transform 0.3s ease-out;
+}
+
+.reveal-ani-hidden {
+  opacity: 0;
+}
+
+.reveal-ani-fade-up {
+  transform: translateY(20px);
+}
+
+.reveal-ani-fade-down {
+  transform: translateY(-20px);
+}
+
+.reveal-ani-fade-left {
+  transform: translateX(20px);
+}
+
+.reveal-ani-fade-right {
+  transform: translateX(-20px);
+}
+
+.reveal-ani-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 1024px) {
+  .reveal-ani-container {
+    transition:
+      opacity 0.4s ease-in-out,
+      transform 0.4s ease-in-out;
+  }
+}
+
+.reveal-ani-mobile-disabled {
+  @media screen and (max-width: 1024px) {
+    opacity: 1;
+    transform: translateY(0) !important;
+    transition: none;
+  }
+}
+
+@keyframes clip-path-init {
+  to {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  }
+}
+.clip-path-init {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+@keyframes clip-path-animate {
+  0% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  }
+  45% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 70%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
