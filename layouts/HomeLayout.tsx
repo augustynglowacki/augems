@@ -63,7 +63,7 @@ export default function HomeLayout({ posts }) {
                 <em className="not-italic text-primary">Revitalize</em> your <br />
                 online presence with
                 <br />a website you{' '}
-                <em className="not-italic underline decoration-primary">deserve.</em>
+                <em className="inline-block not-italic border-b-2 border-b-primary">deserve.</em>
               </h1>
               <div className="mt-6 space-y-2 2xl:text-lg">
                 <BulletPoint>Struggling to attract clients online?</BulletPoint>
@@ -74,7 +74,9 @@ export default function HomeLayout({ posts }) {
               <div className="mt-5 space-y-3">
                 <CheckMark>Transforming your business goals into a website strategy</CheckMark>
                 <CheckMark>Designing a conversion-focused website layout</CheckMark>
-                <CheckMark>Developing a modern & fast website with a robust content management</CheckMark>
+                <CheckMark>
+                  Developing a modern & fast website with a robust content management
+                </CheckMark>
               </div>
             </div>
             <div className="hidden lg:col-span-5 lg:block lg:h-[485px] 2xl:col-span-3 2xl:h-[540px]">

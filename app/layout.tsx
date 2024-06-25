@@ -74,13 +74,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="antialiased text-gray-100 bg-background">
         {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
-        <div className="min-h-[100vh] font-sans">
+        <div className="min-h-[100vh] overflow-x-hidden font-sans">
           <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
             <Header />
-            {/* <Providers>
-                <main className="mb-auto">{children}</main>
-              </Providers> */}
-            <main className="mb-auto">{children}</main>
+            <Providers>
+              <main className="mb-auto">{children}</main>
+            </Providers>
           </SearchProvider>
         </div>
         <Footer />

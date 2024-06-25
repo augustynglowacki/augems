@@ -9,14 +9,14 @@ const variants = {
   out: {
     opacity: 0,
     transition: {
-      duration: 0.2,
+      duration: 0.15,
       ease: 'easeInOut',
     },
   },
   in: {
     opacity: 1,
     transition: {
-      duration: 0.2,
+      duration: 0.15,
       ease: 'easeInOut',
     },
   },
@@ -49,9 +49,10 @@ export function Providers({ children }: { children: React.ReactNode }): React.Re
               setTimeout(() => {
                 window.scrollTo({
                   top: 0,
-                  left: 0
+                  left: 0,
+                  behavior: 'instant'
                 });
-              }, 250); // delay of 0.25 seconds
+              }, 150);
             }
           }}
           onAnimationComplete={() => setExitTriggered(true)}

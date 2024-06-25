@@ -34,13 +34,13 @@ export default function Footer() {
             </h4>
             <ul>
               <li>
-                <Link href="/blog" className="inline-block mb-2 xl:mb-3">
-                  Blog
+                <Link href="/" className="inline-block mb-2 xl:mb-3">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="/tags" className="inline-block mb-2 xl:mb-3">
-                  Blog Categories
+                <Link href="/blog" className="inline-block mb-2 xl:mb-3">
+                  Blog
                 </Link>
               </li>
               <li>
