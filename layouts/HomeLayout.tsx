@@ -69,20 +69,12 @@ export default function HomeLayout({ posts }) {
                 <BulletPoint>Struggling to attract clients online?</BulletPoint>
                 <BulletPoint>Your current website feels like a mess?</BulletPoint>
                 <BulletPoint>Have an idea that needs a bespoke web solution?</BulletPoint>
-                <p className="pt-3">
-                  If you relate with any of these problems, here's how I can solve them:
-                </p>
+                <p className="pt-3">If you relate with these problems, I'm here to help you by:</p>
               </div>
               <div className="mt-5 space-y-3">
-                <CheckMark>
-                  Discovery Process: Transforming business goals into a website strategy
-                </CheckMark>
-                <CheckMark>
-                  Web Design: Breathing life into the action plan with a conversion-focused mindset
-                </CheckMark>
-                <CheckMark>
-                  Web Development: Engineering the designs into a game-changing website
-                </CheckMark>
+                <CheckMark>Transforming your business goals into a website strategy</CheckMark>
+                <CheckMark>Designing a conversion-focused website layout</CheckMark>
+                <CheckMark>Developing a modern & fast website with a robust content management</CheckMark>
               </div>
             </div>
             <div className="hidden lg:col-span-5 lg:block lg:h-[485px] 2xl:col-span-3 2xl:h-[540px]">
